@@ -1,15 +1,15 @@
 ﻿namespace Banking;
 public class Dollar
 {
-  public int Value { get; private set; }
+  public int Value { get; }
 
   public Dollar(int value)
   {
     Value = value;
   }
 
-  public void Times(int amount)
+  public Dollar Times(int amount)
   {
-    Value *= amount;
+    return new Dollar(Value * amount);
   }
 }

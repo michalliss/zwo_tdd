@@ -10,7 +10,9 @@ public class DollarTests
     public void DollarMultiplicationWorks()
     {
         var five = new Dollar(5);
-        five.Times(2);
-        five.Value.Should().Be(10);
+        var ten = five.Times(2);
+        
+        five.Value.Should().Be(5);
+        ten.Value.Should().Be(10);
     }
 }
