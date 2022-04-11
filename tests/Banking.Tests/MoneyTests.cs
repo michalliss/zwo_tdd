@@ -9,46 +9,29 @@ public class MoneyTests
     [Fact]
     public void DollarMultiplicationWorks()
     {
-        var five = new Dollar(5);
+        var five = new Money(5, "USD");
         var ten = five.Times(2);
         
-        five.Should().Be(new Dollar(5));
-        ten.Should().Be(new Dollar(10));
+        five.Should().Be(new Money(5, "USD"));
+        ten.Should().Be(new Money(10, "USD"));
     }
 
     [Fact]
     public void DollarsIdentityIsItsValue()
     {
-        new Dollar(5).Should().Be(new Dollar(5));
-    }
-    
-    // 5 CHF * 2 = $10 CHF
-    [Fact]
-    public void FrancMultiplicationWorks()
-    {
-        var five = new Franc(5);
-        var ten = five.Times(2);
-        
-        five.Should().Be(new Franc(5));
-        ten.Should().Be(new Franc(10));
-    }
-
-    [Fact]
-    public void FrancIdentityIsItsValue()
-    {
-        new Franc(5).Should().Be(new Franc(5));
+        new Money(5, "USD").Should().Be(new Money(5, "USD"));
     }
 
     [Fact]
     public void OneFrancIsNotOneDollar()
     {
-        new Franc(1).Should().NotBe(new Dollar(1));
+        new Money(1, "CHF").Should().NotBe(new Money(1, "USD"));
     }
 
     [Fact]
     public void CurrenciesMatch()
     {
-        new Franc(1).Currency.Should().Be("CHF");
-        new Dollar(1).Currency.Should().Be("USD");
+        new Money(5, "CHF").Currency.Should().Be("CHF");
+        new Money(5, "USD").Currency.Should().Be("USD");
     }
 }

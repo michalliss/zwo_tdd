@@ -1,27 +1,28 @@
 namespace Banking;
 
-public abstract class Money : IEquatable<Money>
+public class Money : IEquatable<Money>
 {
   public int Value { get; }
-  public abstract string Currency { get; }
+  public string Currency { get; }
   
-  public Money(int value)
+  public Money(int value, string currency)
   {
-    
+    Value = value;
+    Currency = currency;
   }
   
   public Money Times(int amount)
   {
-    return new Dollar(Value * amount);
+    return new Money(Value * amount, Currency);
   }
   
   #region Equality
-  
+
   public bool Equals(Money? other)
   {
     if (ReferenceEquals(null, other)) return false;
     if (ReferenceEquals(this, other)) return true;
-    return Value == other.Value;
+    return Value == other.Value && Currency == other.Currency;
   }
 
   public override bool Equals(object? obj)
@@ -34,7 +35,7 @@ public abstract class Money : IEquatable<Money>
 
   public override int GetHashCode()
   {
-    return Value;
+    return HashCode.Combine(Value, Currency);
   }
 
   public static bool operator ==(Money? left, Money? right)
@@ -46,6 +47,6 @@ public abstract class Money : IEquatable<Money>
   {
     return !Equals(left, right);
   }
-
+  
   #endregion
 }
