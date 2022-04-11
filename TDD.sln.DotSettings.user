@@ -11,7 +11,7 @@
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ecefe967_002D8710_002D4882_002D938d_002D49605cce6153/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="DollarMultiplicationWorks #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::7ACFF769-F13E-4295-BFF7-925487EF3A28::net6.0::Banking.Tests.DollarTests.DollarMultiplicationWorks&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::7ACFF769-F13E-4295-BFF7-925487EF3A28::net6.0::Banking.Tests.DollarTests.DollarsIdentityIsItsValue&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::7ACFF769-F13E-4295-BFF7-925487EF3A28::net6.0::Banking.Tests.MoneyTests.OneFrancIsNotOneDollar&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::7ACFF769-F13E-4295-BFF7-925487EF3A28::net6.0::Banking.Tests.MoneyTests.CurrenciesMatch&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

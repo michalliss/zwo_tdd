@@ -44,4 +44,11 @@ public class MoneyTests
     {
         new Franc(1).Should().NotBe(new Dollar(1));
     }
+
+    [Fact]
+    public void CurrenciesMatch()
+    {
+        new Franc(1).Currency.Should().Be("CHF");
+        new Dollar(1).Currency.Should().Be("USD");
+    }
 }

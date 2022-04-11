@@ -6,4 +6,6 @@ public class Franc : Money
   {
     
   }
+
+  public override string Currency => "CHF";
 }

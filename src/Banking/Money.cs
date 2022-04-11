@@ -3,6 +3,7 @@ namespace Banking;
 public abstract class Money : IEquatable<Money>
 {
   public int Value { get; }
+  public abstract string Currency { get; }
   
   public Money(int value)
   {
