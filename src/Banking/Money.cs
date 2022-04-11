@@ -15,6 +15,17 @@ public class Money : IEquatable<Money>
   {
     return new Money(Value * amount, Currency);
   }
+
+  public Money Add(Money money, Bank bank)
+  {
+    if (money.Currency == Currency)
+    {
+      return new Money(Value + money.Value, Currency);
+    }
+    
+    var rate = bank.GetRate(money.Currency, Currency);
+    return new Money(Value + (int) (rate * money.Value), Currency);
+  }
   
   #region Equality
 

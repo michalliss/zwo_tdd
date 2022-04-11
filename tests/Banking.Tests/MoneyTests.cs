@@ -34,4 +34,12 @@ public class MoneyTests
         new Money(5, "CHF").Currency.Should().Be("CHF");
         new Money(5, "USD").Currency.Should().Be("USD");
     }
+
+    [Fact]
+    public void AddCurrencies()
+    {
+        var bank = new Bank();
+        bank.AddRate("CHF", "USD", 0.5);
+        new Money(5, "USD").Add(new Money(6, "CHF"), bank).Should().Be(new Money(8, "USD"));
+    }
 }
