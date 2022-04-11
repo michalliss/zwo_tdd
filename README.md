@@ -32,3 +32,8 @@ The new implementation should support the following operations:
 $5 + 10 CHF = $10 if rate is 2:1
 $5 * 2 = $10 (this one is obvious but important)
 ```
+
+## Sources Used and disclaimer
+
+The entire example is based on the one described in detail in TDD by Example by Kent Beck.
+We simply adapted it to C# in order to use during a live presentation for educational purposes.
