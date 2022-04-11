@@ -12,13 +12,13 @@ public class DollarTests
         var five = new Dollar(5);
         var ten = five.Times(2);
         
-        five.Value.Should().Be(5);
-        ten.Value.Should().Be(10);
+        five.Should().Be(new Dollar(5));
+        ten.Should().Be(new Dollar(10));
     }
 
     [Fact]
     public void DollarsIdentityIsItsValue()
     {
-        (new Dollar(5)).Should().Be(new Dollar(5));
+        new Dollar(5).Should().Be(new Dollar(5));
     }
 }
